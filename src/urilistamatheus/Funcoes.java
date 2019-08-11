@@ -63,7 +63,7 @@ public class Funcoes {
         }       
     }
     
-    public static void Uri1867(){
+    public static int Uri1867(){
         
         int numero1, numero2, casas1, casas2, valor1 = 0, valor2 = 0;
         String auxiliar1, auxiliar2;
@@ -77,18 +77,18 @@ public class Funcoes {
         auxiliar1 = Integer.toString(numero1);
         auxiliar2 = Integer.toString(numero2);
         
-        casas1 = auxiliar1.length();
-        casas2 = auxiliar2.length();
+        if (numero1 == numero2 && numero1 == 0) {
+            return 0;
+        }
         
-        if (casas1 != 1) {
+        if (auxiliar1.length() != 1) {
             while (auxiliar1.length() > 1){   
-                for (int i = 0; i < casas1; i++) {
+                for (int i = 0; i < auxiliar1.length(); i++) {
                     aux1 = auxiliar1.charAt(i);
                     valor1 += aux1 - '0';
                 }
                 auxiliar1 = Integer.toString(valor1);
-                casas1 = auxiliar1.length();
-                if (casas1 == 1) {
+                if (auxiliar1.length() == 1) {
                     break;
                 }
             } 
@@ -96,25 +96,20 @@ public class Funcoes {
             valor1 = numero1;
         }
         
-        System.out.println(valor1);
-        
-        if (casas2 != 1) {
+        if (auxiliar2.length() != 1) {
             while (auxiliar2.length() > 1){   
-                for (int j = 0; j < casas2; j++) {
+                for (int j = 0; j < auxiliar2.length(); j++) {
                     aux2 = auxiliar2.charAt(j);
                     valor2 += aux2 - '0';
                 }
                 auxiliar2 = Integer.toString(valor2);
-                casas2 = auxiliar2.length();
-                if (casas2 == 1) {
+                if (auxiliar2.length() == 1) {
                     break;
                 }
             }
         }else{
             valor2 = numero2;
         }
-        
-        System.out.println(valor2);
         
         if (valor1 > valor2) {
             System.out.println("1");
@@ -123,7 +118,7 @@ public class Funcoes {
         } else {
             System.out.println("0");
         }
-        
+        return 0;
     }
     
     public static void Uri2863(){
