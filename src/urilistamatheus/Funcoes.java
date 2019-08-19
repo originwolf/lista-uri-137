@@ -63,62 +63,56 @@ public class Funcoes {
         }       
     }
     
-    public static int Uri1867(){
+    public static void Uri1867(){
         
-        int numero1, numero2, casas1, casas2, valor1 = 0, valor2 = 0;
+        int numero1, numero2, valor1, valor2;
         String auxiliar1, auxiliar2;
-        char aux1, aux2;
         
         Scanner ler = new Scanner(System.in);
         
         numero1 = ler.nextInt();
         numero2 = ler.nextInt();
-        
-        auxiliar1 = Integer.toString(numero1);
-        auxiliar2 = Integer.toString(numero2);
-        
-        if (numero1 == numero2 && numero1 == 0) {
-            return 0;
-        }
-        
-        if (auxiliar1.length() != 1) {
+  
+        while(numero1 != 0 && numero2 != 0){
+            
+            auxiliar1 = Integer.toString(numero1);
+            auxiliar2 = Integer.toString(numero2);
+            
+            valor1 = 0; 
+            valor2 = 0;
+            
             while (auxiliar1.length() > 1){   
                 for (int i = 0; i < auxiliar1.length(); i++) {
-                    aux1 = auxiliar1.charAt(i);
-                    valor1 += aux1 - '0';
+                    valor1 += auxiliar1.charAt(i) - '0'; 
                 }
                 auxiliar1 = Integer.toString(valor1);
-                if (auxiliar1.length() == 1) {
-                    break;
-                }
-            } 
-        }else{
-            valor1 = numero1;
-        }
-        
-        if (auxiliar2.length() != 1) {
+                if (auxiliar1.length() > 1) {
+                    valor1 = 0;
+                }              
+            }        
+
             while (auxiliar2.length() > 1){   
-                for (int j = 0; j < auxiliar2.length(); j++) {
-                    aux2 = auxiliar2.charAt(j);
-                    valor2 += aux2 - '0';
+                for (int i = 0; i < auxiliar2.length(); i++) {
+                    valor2 += auxiliar2.charAt(i) - '0'; 
                 }
                 auxiliar2 = Integer.toString(valor2);
-                if (auxiliar2.length() == 1) {
-                    break;
-                }
+                if (auxiliar2.length() > 1) {
+                    valor2 = 0;
+                }              
+            } 
+
+            if (valor1 > valor2) {
+                System.out.println("1");
+            } else if(valor2 > valor1){
+                System.out.println("2");
+            } else {
+                System.out.println("0");
             }
-        }else{
-            valor2 = numero2;
+
+            numero1 = ler.nextInt();
+            numero2 = ler.nextInt();
+      
         }
-        
-        if (valor1 > valor2) {
-            System.out.println("1");
-        } else if(valor2 > valor1){
-            System.out.println("2");
-        } else {
-            System.out.println("0");
-        }
-        return 0;
     }
     
     public static void Uri2863(){
