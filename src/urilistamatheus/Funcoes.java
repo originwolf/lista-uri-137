@@ -78,40 +78,47 @@ public class Funcoes {
             auxiliar1 = Integer.toString(numero1);
             auxiliar2 = Integer.toString(numero2);
             
-            valor1 = 0; 
+            valor1 = 0;
             valor2 = 0;
             
-            while (auxiliar1.length() > 1){   
-                for (int i = 0; i < auxiliar1.length(); i++) {
-                    valor1 += auxiliar1.charAt(i) - '0'; 
+            if (auxiliar1.length() > 1) {
+                while (auxiliar1.length() > 1){   
+                    for (int i = 0; i < auxiliar1.length(); i++) {
+                        valor1 += auxiliar1.charAt(i) - '0'; 
+                    }
+                    auxiliar1 = Integer.toString(valor1);
+                    if (auxiliar1.length() > 1) {
+                        valor1 = 0;
+                    }
                 }
-                auxiliar1 = Integer.toString(valor1);
-                if (auxiliar1.length() > 1) {
-                    valor1 = 0;
-                }              
-            }        
-
-            while (auxiliar2.length() > 1){   
-                for (int i = 0; i < auxiliar2.length(); i++) {
-                    valor2 += auxiliar2.charAt(i) - '0'; 
+            } else {
+                valor1 = numero1;
+            }
+                    
+            if (auxiliar2.length() > 1) {
+                while (auxiliar2.length() > 1){   
+                    for (int i = 0; i < auxiliar2.length(); i++) {
+                        valor2 += auxiliar2.charAt(i) - '0'; 
+                    }
+                    auxiliar2 = Integer.toString(valor2);
+                    if (auxiliar2.length() > 1) {
+                        valor2 = 0;
+                    } 
                 }
-                auxiliar2 = Integer.toString(valor2);
-                if (auxiliar2.length() > 1) {
-                    valor2 = 0;
-                }              
-            } 
+            } else {
+                valor2 = numero2;
+            }            
 
             if (valor1 > valor2) {
-                System.out.println("1");
+                System.out.printf("1\n");
             } else if(valor2 > valor1){
-                System.out.println("2");
+                System.out.printf("2\n");
             } else {
-                System.out.println("0");
+                System.out.printf("0\n");
             }
 
             numero1 = ler.nextInt();
-            numero2 = ler.nextInt();
-      
+            numero2 = ler.nextInt();  
         }
     }
     
