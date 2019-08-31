@@ -166,6 +166,33 @@ public class Funcoes {
         }    
     }
     
+    public static void Uri2146(){        
+        Scanner ler = new Scanner(System.in);
+
+        while(ler.hasNext()){
+            int senha = ler.nextInt();
+            System.out.println(--senha);
+        }
+        ler.close();
+    }
+    
+    public static void Uri2147(){
+        
+        int casos;
+        double resultado;
+        String palavra;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        for(int i = 0; i < casos; i++){
+            palavra = ler.next();
+            resultado = palavra.length()*0.01;
+            System.out.printf("%.2f\n",resultado);
+        }
+    }
+    
     public static void Uri2863(){
         
         int voltas;
