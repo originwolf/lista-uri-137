@@ -200,12 +200,31 @@ public class Funcoes {
         
         casos = ler.nextInt();
         
-        for(int i = 0; i < casos; i++){
-            
+        for(int i = 0; i < casos; i++){ 
             pergunta = ler.next();
-            System.out.println("I am Toorg!");
-            
+            System.out.println("I am Toorg!");        
         }
+    }
+    
+    public static void Uri2592(){
+        
+        int casos;
+        double numero, numeroAleatorio;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        double[] vetor = new double[casos];
+        
+        for(int i = 0; i < casos; i++){
+            numero = Math.random() * casos;
+            numeroAleatorio = Math.round(numero);
+            vetor[i] = numeroAleatorio;
+        }
+        
+        
+        
     }
     
     public static void Uri2863(){
