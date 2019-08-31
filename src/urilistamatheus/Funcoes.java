@@ -166,18 +166,17 @@ public class Funcoes {
         }    
     }
     
-    public static void Uri2146(){        
+    public static void Uri2146(){
+        int senha;
         Scanner ler = new Scanner(System.in);
 
         while(ler.hasNext()){
-            int senha = ler.nextInt();
+            senha = ler.nextInt();
             System.out.println(--senha);
         }
-        ler.close();
     }
     
-    public static void Uri2147(){
-        
+    public static void Uri2147(){    
         int casos;
         double resultado;
         String palavra;
@@ -190,6 +189,22 @@ public class Funcoes {
             palavra = ler.next();
             resultado = palavra.length()*0.01;
             System.out.printf("%.2f\n",resultado);
+        }
+    }
+    
+    public static void Uri2581(){
+        int casos;
+        String pergunta;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        for(int i = 0; i < casos; i++){
+            
+            pergunta = ler.next();
+            System.out.println("I am Toorg!");
+            
         }
     }
     
