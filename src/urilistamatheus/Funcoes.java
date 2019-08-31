@@ -65,7 +65,7 @@ public class Funcoes {
     
     public static void Uri1867(){
         
-        int numero1, numero2, valor1, valor2;
+        int numero1, numero2, valor1, valor2, n=0;
         String auxiliar1, auxiliar2;
         
         Scanner ler = new Scanner(System.in);
@@ -73,8 +73,10 @@ public class Funcoes {
         numero1 = ler.nextInt();
         numero2 = ler.nextInt();
   
-        while(numero1 != 0 && numero2 != 0){
-            
+        while(n == 0){
+            if (numero1 == 0 && numero2 == 0) {
+                n++;
+            }
             auxiliar1 = Integer.toString(numero1);
             auxiliar2 = Integer.toString(numero2);
             
@@ -110,16 +112,58 @@ public class Funcoes {
             }            
 
             if (valor1 > valor2) {
-                System.out.printf("1\n");
+                System.out.println("1");
             } else if(valor2 > valor1){
-                System.out.printf("2\n");
+                System.out.println("2");
             } else {
-                System.out.printf("0\n");
+                System.out.println("0");
             }
 
             numero1 = ler.nextInt();
             numero2 = ler.nextInt();  
         }
+    }
+    
+    public static void Uri1873(){
+        
+        int casos;
+        String sheldon, rajesh;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        while(casos > 0){
+            sheldon = ler.next();
+            rajesh = ler.next();
+            
+            if(rajesh.equalsIgnoreCase(sheldon)){
+                System.out.println("empate");
+            } else if (rajesh.equalsIgnoreCase("tesoura") && sheldon.equalsIgnoreCase("papel")){
+                System.out.println("sheldon");
+            } else if (rajesh.equalsIgnoreCase("papel") && sheldon.equalsIgnoreCase("pedra")){
+                System.out.println("sheldon");
+            }else if (rajesh.equalsIgnoreCase("pedra") && sheldon.equalsIgnoreCase("lagarto")){
+                System.out.println("sheldon");
+            }else if (rajesh.equalsIgnoreCase("lagarto") && sheldon.equalsIgnoreCase("spock")){
+                System.out.println("sheldon");
+            }else if (rajesh.equalsIgnoreCase("spock") && sheldon.equalsIgnoreCase("tesoura")){
+                System.out.println("sheldon");
+            }else if (rajesh.equalsIgnoreCase("tesoura") && sheldon.equalsIgnoreCase("lagarto")){
+                System.out.println("sheldon");
+            }else if (rajesh.equalsIgnoreCase("lagarto") && sheldon.equalsIgnoreCase("papel")){
+                System.out.println("sheldon");
+            }else if (rajesh.equalsIgnoreCase("papel") && sheldon.equalsIgnoreCase("spock")){
+                System.out.println("sheldon");
+            }else if (rajesh.equalsIgnoreCase("spock") && sheldon.equalsIgnoreCase("pedra")){
+                System.out.println("sheldon");
+            }else if (rajesh.equalsIgnoreCase("pedra") && sheldon.equalsIgnoreCase("tesoura")){
+                System.out.println("sheldon");
+            } else {
+                System.out.println("rajesh");
+            }        
+            casos--;
+        }    
     }
     
     public static void Uri2863(){
