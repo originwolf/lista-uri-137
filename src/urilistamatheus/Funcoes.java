@@ -206,24 +206,19 @@ public class Funcoes {
         }
     }
     
-    public static void Uri2592(){
+    public static void Uri2861(){
         
         int casos;
-        double numero, numeroAleatorio;
+        String pergunta;
         
         Scanner ler = new Scanner(System.in);
         
         casos = ler.nextInt();
         
-        double[] vetor = new double[casos];
-        
         for(int i = 0; i < casos; i++){
-            numero = Math.random() * casos;
-            numeroAleatorio = Math.round(numero);
-            vetor[i] = numeroAleatorio;
+            pergunta = ler.next();
+            System.out.println("gzuz");
         }
-        
-        
         
     }
     
