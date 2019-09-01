@@ -206,8 +206,7 @@ public class Funcoes {
         }
     }
     
-    public static void Uri2861(){
-        
+    public static void Uri2861(){    
         int casos;
         String pergunta;
         
@@ -218,8 +217,25 @@ public class Funcoes {
         for(int i = 0; i < casos; i++){
             pergunta = ler.next();
             System.out.println("gzuz");
-        }
+        }      
+    }
+    
+    public static void Uri2862(){
+        int casos, poderDeLuta;
         
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        for(int i = 0; i < casos; i++){
+            poderDeLuta = ler.nextInt();
+            
+            if(poderDeLuta <= 8000){
+                System.out.println("Inseto!");
+            } else {
+                System.out.println("Mais de 8000!");
+            }
+        }
     }
     
     public static void Uri2863(){
