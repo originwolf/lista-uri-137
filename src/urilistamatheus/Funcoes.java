@@ -206,6 +206,49 @@ public class Funcoes {
         }
     }
     
+    public static void Uri2591(){
+        int casos, contador, contador1, contador2, posicao;
+        String ataque;
+        
+        contador1 = 0;
+        contador2 = 0;
+        posicao = 0;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        for(int i = 0; i < casos; i++){
+            ataque = ler.next();
+            for (int j = 1; j < ataque.length(); j++) {
+                if (ataque.charAt(j) != 'a') {                  
+                    posicao = j;
+                    break;
+                } else {
+                    contador1++;
+                }
+            }
+            
+            for (int j = posicao + 3; j < ataque.length(); j++) {
+                if (ataque.charAt(j) != 'a') {
+                    break;
+                } else {
+                    contador2++;
+                }
+            }
+            
+            contador = contador1 * contador2;
+            System.out.printf("k");
+            
+            for (int k = 0; k < contador; k++) {              
+                System.out.printf("a");
+            }
+            System.out.printf("\n");
+            contador1 = 0;
+            contador2 = 0;
+        }
+    }
+    
     public static void Uri2861(){    
         int casos;
         String pergunta;
