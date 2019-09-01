@@ -133,19 +133,6 @@ public class Funcoes {
         numero1 = ler.nextInt();
         numero2 = ler.nextInt();
         
-        /*while(ler.hasNext()) {
-            numero1 = ler.nextInt();
-            numero2 = ler.nextInt();
-
-            if(m == 0 && n == 0) {
-                break;
-            }
-
-            auxiliar = Integer.toString(numero1 + numero2);
-            auxiliar = auxiliar.replace("0", "");
-            System.out.println(auxiliar);
-        }*/
-        
         while(true){
             if (numero1 == 0 && numero2 == 0) {
                 break;
