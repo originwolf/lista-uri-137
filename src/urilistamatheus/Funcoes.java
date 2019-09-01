@@ -64,51 +64,48 @@ public class Funcoes {
     }
     
     public static void Uri1867(){
-        
-        int numero1, numero2, valor1, valor2, n=0;
-        String auxiliar1, auxiliar2;
+        int valor1, valor2, n=0;
+        String numero1, numero2, auxiliar1, auxiliar2;
         
         Scanner ler = new Scanner(System.in);
-        
-        numero1 = ler.nextInt();
-        numero2 = ler.nextInt();
-  
-        while(n == 0){
-            if (numero1 == 0 && numero2 == 0) {
-                n++;
+
+        while(true){
+            numero1 = ler.next();
+            numero2 = ler.next();
+            
+            if (Integer.parseInt(numero1) == 0 && Integer.parseInt(numero2) == 0) {
+                break;
             }
-            auxiliar1 = Integer.toString(numero1);
-            auxiliar2 = Integer.toString(numero2);
             
             valor1 = 0;
             valor2 = 0;
             
-            if (auxiliar1.length() > 1) {
-                while (auxiliar1.length() > 1){   
-                    for (int i = 0; i < auxiliar1.length(); i++) {
-                        valor1 += auxiliar1.charAt(i) - '0'; 
+            if (numero1.length() > 1) {
+                while (numero1.length() > 1){   
+                    for (int i = 0; i < numero1.length(); i++) {
+                        valor1 += numero1.charAt(i) - '0'; 
                     }
-                    auxiliar1 = Integer.toString(valor1);
-                    if (auxiliar1.length() > 1) {
+                    numero1 = Integer.toString(valor1);
+                    if (numero1.length() > 1) {
                         valor1 = 0;
                     }
                 }
             } else {
-                valor1 = numero1;
+                valor1 = Integer.parseInt(numero1);
             }
                     
-            if (auxiliar2.length() > 1) {
-                while (auxiliar2.length() > 1){   
-                    for (int i = 0; i < auxiliar2.length(); i++) {
-                        valor2 += auxiliar2.charAt(i) - '0'; 
+            if (numero2.length() > 1) {
+                while (numero2.length() > 1){   
+                    for (int i = 0; i < numero2.length(); i++) {
+                        valor2 += numero2.charAt(i) - '0'; 
                     }
-                    auxiliar2 = Integer.toString(valor2);
-                    if (auxiliar2.length() > 1) {
+                    numero2 = Integer.toString(valor2);
+                    if (numero2.length() > 1) {
                         valor2 = 0;
                     } 
                 }
             } else {
-                valor2 = numero2;
+                valor2 = Integer.parseInt(numero2);
             }            
 
             if (valor1 > valor2) {
@@ -117,10 +114,7 @@ public class Funcoes {
                 System.out.println("2");
             } else {
                 System.out.println("0");
-            }
-
-            numero1 = ler.nextInt();
-            numero2 = ler.nextInt();  
+            } 
         }
     }
     
@@ -213,6 +207,47 @@ public class Funcoes {
             palavra = ler.next();
             resultado = palavra.length()*0.01;
             System.out.printf("%.2f\n",resultado);
+        }
+    }
+    
+    public static void Uri2152(){
+        int casos, estado, horas, minutos;
+        String situacao, horasAux, minutosAux;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        for (int i = 0; i < casos; i++) {
+            horas = ler.nextInt();
+            minutos = ler.nextInt();
+            estado = ler.nextInt();
+            switch (estado) {
+                case 1:
+                    situacao = "A porta abriu!";
+                    break;
+                case 0:
+                    situacao = "A porta fechou";
+                    break;
+                default:
+                    situacao = "Erro";
+                    break;
+            }
+            
+            if (horas < 10) {
+                horasAux = Integer.toString(horas);
+                horasAux = "0" + horasAux;
+            } else {
+                horasAux = Integer.toString(horas);
+            }
+            
+            if (minutos < 10) {
+                minutosAux = Integer.toString(minutos);
+                minutosAux = "0" + minutosAux;
+            } else {
+                minutosAux = Integer.toString(minutos);
+            }
+            System.out.println(horasAux + ":" + minutosAux + " - " + situacao);
         }
     }
     
