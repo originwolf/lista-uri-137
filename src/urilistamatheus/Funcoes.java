@@ -124,6 +124,43 @@ public class Funcoes {
         }
     }
     
+    public static void Uri1871(){
+        int numero1, numero2, numero;
+        String auxiliar, numeroFinal;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        numero1 = ler.nextInt();
+        numero2 = ler.nextInt();
+        
+        /*while(ler.hasNext()) {
+            numero1 = ler.nextInt();
+            numero2 = ler.nextInt();
+
+            if(m == 0 && n == 0) {
+                break;
+            }
+
+            auxiliar = Integer.toString(numero1 + numero2);
+            auxiliar = auxiliar.replace("0", "");
+            System.out.println(auxiliar);
+        }*/
+        
+        while(true){
+            if (numero1 == 0 && numero2 == 0) {
+                break;
+            }
+            numero = numero1 + numero2;
+            auxiliar = Integer.toString(numero);
+            
+            auxiliar = auxiliar.replace("0", "");
+            
+            System.out.println(auxiliar);
+            numero1 = ler.nextInt();
+            numero2 = ler.nextInt();
+        }
+    }
+    
     public static void Uri1873(){
         
         int casos;
