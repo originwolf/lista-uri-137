@@ -227,7 +227,7 @@ public class Funcoes {
                     situacao = "A porta abriu!";
                     break;
                 case 0:
-                    situacao = "A porta fechou";
+                    situacao = "A porta fechou!";
                     break;
                 default:
                     situacao = "Erro";
@@ -263,6 +263,56 @@ public class Funcoes {
             pergunta = ler.next();
             System.out.println("I am Toorg!");        
         }
+    }
+    
+    public static void Uri2582(){
+        int casos, numero1, numero2;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        for (int i = 0; i < casos; i++) {
+            numero1 = ler.nextInt();
+            numero2 = ler.nextInt();
+            switch (numero1 + numero2) {
+                case 0:
+                    System.out.println("PROXYCITY");
+                    break;
+                case 1:
+                    System.out.println("P.Y.N.G.");
+                    break;
+                case 2:
+                    System.out.println("DNSUEY!");
+                    break;
+                case 3:
+                    System.out.println("SERVERS");
+                    break;
+                case 4:
+                    System.out.println("HOST!");
+                    break;
+                case 5:
+                    System.out.println("CRIPTONIZE");
+                    break;
+                case 6:
+                    System.out.println("OFFLINE DAY");
+                    break;
+                case 7:
+                    System.out.println("SALT");
+                    break;
+                case 8:
+                    System.out.println("ANSWER!");
+                    break;
+                case 9:
+                    System.out.println("RAR?");
+                    break;
+                case 10:
+                    System.out.println("WIFI ANTENNAS");
+                    break;
+                default:
+                    break;
+            }
+        }    
     }
     
     public static void Uri2591(){
