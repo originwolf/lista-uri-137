@@ -424,4 +424,23 @@ public class Funcoes {
             }
         }
     }
+    
+    public static void Uri2866(){
+        int casos;
+        String mensagem;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        casos = ler.nextInt();
+        
+        for (int i = 0; i < casos; i++) {
+            mensagem = ler.next();
+            for (int j = mensagem.length() - 1; j >= 0; j--) {
+                if (Character.isLowerCase(mensagem.charAt(j))) {
+                    System.out.printf("%c",mensagem.charAt(j));
+                }
+            }
+            System.out.printf("\n");
+        }
+    }
 }
