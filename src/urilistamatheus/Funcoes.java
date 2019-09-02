@@ -210,6 +210,32 @@ public class Funcoes {
         }
     }
     
+    public static int Uri2149(){
+        double posicao, resultado;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        posicao = ler.nextDouble();
+   
+        double sequencia (int posicao) {
+            if (posicao == 1){
+                return 0;
+            } else if (posicao == 2){
+                return 1;
+            }
+
+            if (posicao % 2 == 0){
+                return sequencia(posicao-2) * sequencia(posicao-1);
+            } 
+                
+            if (posicao % 2 != 0){
+                return sequencia(posicao-2) + sequencia(posicao-1);
+            }        
+        }
+        
+        resultado = sequencia(posicao);
+    }
+    
     public static void Uri2152(){
         int casos, estado, horas, minutos;
         String situacao, horasAux, minutosAux;
